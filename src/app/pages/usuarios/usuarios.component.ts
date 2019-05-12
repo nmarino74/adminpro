@@ -69,17 +69,17 @@ export class UsuariosComponent implements OnInit {
 swal('No puede borrar usuario', 'No se puede borrar a si mismo', 'error');
       return;
     }
-    
+
     swal({
       title: 'Está seguro?',
       text: 'Está a punto de borrar al usuario ' + usuario.nombre,
       icon: 'warning',
-      buttons: true,
+      buttons: [true, true],
       dangerMode: true,
     })
     .then( borrar => {
       if (borrar) {
-        this._usuarioService.borrarUsuario(usuario._id).subscribe( resp => { 
+        this._usuarioService.borrarUsuario(usuario._id).subscribe( resp => {
             console.log(resp);
             this.cargarUsuarios();
          });
