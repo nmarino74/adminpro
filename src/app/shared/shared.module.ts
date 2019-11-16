@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { PipesModule } from '../pipes/pipes.module';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { ModalComponent } from '../components/modal/modal.component';
 
 
 @NgModule({
@@ -20,13 +22,17 @@ import { PipesModule } from '../pipes/pipes.module';
         HeaderComponent,
         SidebarComponent,
         BreadcrumbsComponent,
-        NopagefoundComponent
+        NopagefoundComponent,
+        ModalUploadComponent,
+        ModalComponent
     ],
     exports: [
         HeaderComponent,
         SidebarComponent,
         BreadcrumbsComponent,
-        NopagefoundComponent
+        NopagefoundComponent,
+        ModalUploadComponent,
+        ModalComponent
     ]
 })
 export class SharedModule { }
